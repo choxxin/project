@@ -1,6 +1,20 @@
 import { NextResponse } from "next/server";
 import EcoModel from "../../schema/operationinfo";
-import connectDB from "../../utils/route"; // Adjust the import path as needed
+// import connectDB from "../../utils/route"; // Adjust the import path as needed
+async function connectDB() {
+  try {
+    console.log("Connecting to MongoDB...");
+    const connectionInstance = await mongoose.connect(
+      process.env.NEXT_MONGODB_URI
+    );
+    console.log(
+      `\n MongoDB connected !! DB HOST: ${connectionInstance.connection.host}`
+    );
+  } catch (error) {
+    console.log("MONGODB connection FAILED ", error);
+    process.exit(1);
+  }
+}
 
 // Helper function to set CORS headers
 function setCORSHeaders(response) {
