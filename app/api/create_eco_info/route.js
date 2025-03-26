@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import EcoModel from "../../schema/operationinfo";
-import connectDB from "../route"; // Adjust the import path as needed
+import connectDB from "../../utils/route"; // Adjust the import path as needed
 
 // Helper function to set CORS headers
 function setCORSHeaders(response) {

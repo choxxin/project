@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import connectDB from "../route";
+import connectDB from "../../utils/route"; // Adjust the import path as needed
 import GarbageModel from "../../schema/garbage_detal"; // Adjust the path as needed
 
 // Enable CORS
