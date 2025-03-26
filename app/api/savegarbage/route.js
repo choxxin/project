@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 // import connectDB from "../../utils/route"; // Adjust the import path as needed
 import GarbageModel from "../../schema/garbage_detal"; // Adjust the path as needed
+import mongoose from "mongoose";
 async function connectDB() {
   try {
     console.log("Connecting to MongoDB...");

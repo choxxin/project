@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import EcoModel from "../../schema/operationinfo";
+import mongoose from "mongoose";
 // import connectDB from "../../utils/route"; // Adjust the import path as needed
 async function connectDB() {
   try {
